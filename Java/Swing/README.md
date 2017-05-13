@@ -1,5 +1,5 @@
 ## Java AWT Swing programs
 
-Dynamic List
-Information window / Form
-Image Upload
+Dynamic List <br/>
+Information window / Form <br/>
+Image Upload <br/>
