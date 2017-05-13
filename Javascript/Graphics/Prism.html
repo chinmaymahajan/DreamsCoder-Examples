@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>
+ Prism in Three.js with example | DreamsCoder.com 
+</title>
+<meta charset="UTF-8">
+<meta name="description" content="Prism in Three.js with example">
+<meta name="keywords" content="3d prism, 3d pyramid,Prism,webgl,Pyramid,three.js,3js,computer graphics,3d computer graphics,pyramid example,prism example,dreamscoder.com,dreamscoder,javascript">
+<meta name="author" content="Chinmay Mahajan">
+</head>
+<body>
+	<font color="black">
+   <h3> Prism in Three.js </h3>
+        Bottom Polygon <input type="text" id="bp" min="-1" max="1" value="0.7">
+        Height <input type="text" id="h" min="-1" max="1" value="1.6">
+        Dimension  <input type="text" id="d" min="1" max="10" value="4">
+        <button id="butt">Draw Prism </button>
+
+	<script src="Three.js"></script>
+         <script>
+
+          document.getElementById("butt").onclick = function() {drawp()};
+             function drawp()
+                {
+
+            var bp = document.getElementById("bp").value;
+            var h = document.getElementById("h").value;
+            var d = document.getElementById("d").value;
+
+            var scene = new THREE.Scene(); 
+            var camera = new THREE.PerspectiveCamera
+            (75, window.innerWidth/window.innerHeight, 0.2, 1000);
+ 
+            var renderer = new THREE.WebGLRenderer();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            document.body.appendChild(renderer.domElement);
+ 
+            camera.position.z = 3.9;
+            
+            //1st top planar polygon
+            //2nd is bottom planar polygon
+            //3rd is  HeigHt
+            //4tH is dimension 4 for 4d
+
+            var pyramidgeometry = new THREE.CylinderGeometry(0.1, bp, h, d, false);
+            var pyramidmaterial = new THREE.MeshBasicMaterial
+            ({wireframe: true, color: 0x0fff00});
+            var pyramid = new THREE.Mesh(pyramidgeometry, pyramidmaterial);
+    
+            pyramid.position.set(0.3,0.4,1.6);
+            scene.add(pyramid);
+ 
+            var render = function () {
+                requestAnimationFrame(render);
+                
+                pyramid.rotation.y += 0.01;
+                pyramid.rotation.z += 0.01;
+                pyramid.rotation.x += 0.01;
+                
+                renderer.render(scene, camera);
+            };
+ 
+ 
+            render();
+        }//draw
+        </script>
+
+</body>
+</html>
