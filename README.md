@@ -1,2 +1,2 @@
 # DreamsCoder-Examples
-This repository contains the example code for the posts on the blog www.DreamsCoder.com
+This repository contains the example code of the posts on the blog www.DreamsCoder.com
