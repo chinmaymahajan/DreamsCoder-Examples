@@ -1,2 +1,2 @@
 
-# Programs on Javascript event handling, local storage, styling etc.
+## Programs on Javascript event handling, local storage, styling etc.
