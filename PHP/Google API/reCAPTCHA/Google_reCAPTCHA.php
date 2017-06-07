@@ -19,7 +19,6 @@ City : <input type="text" name="city"><br><br>
 <div class="g-recaptcha" data-sitekey="***** YOUR SITE KEY goes here *****"></div>
 <input type="submit" name="submit" value="submit">
 
-<a href=""> Source Code </a>
 </form>
 
 <?php
