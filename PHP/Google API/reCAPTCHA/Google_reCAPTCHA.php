@@ -11,12 +11,12 @@ CAPTCHA demo, Google CAPTCHA, CAPTCHA LiveDemo, dreamscoder.com,dreamscoder">
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-<h1> Integrating Google reCAPTCHA Demo </h1>
-
+<h1> Invisible reCAPTCHA Demo </h1>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <form action="" method="post">
 Name : <input type="text" name="name"><br>
 City : <input type="text" name="city"><br><br>
-<div class="g-recaptcha" data-sitekey="***** YOUR SITE KEY goes here *****"></div>
+6Lft_GEUAAAAAKrzxlBk6uzOURlGqCWxaZiJ2a0T
 <input type="submit" name="submit" value="submit">
 
 </form>
@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
 function CheckCaptcha($userResponse) {
         $fields_string = '';
         $fields = array(
-            'secret' => '****** YOUR SECRET KEY goes here ******',
+            'secret' => 6Ldi_mEUAAAAAN_Y2qpGDWLI4oVuF0llXOf6NzCr
             'response' => $userResponse
         );
         foreach($fields as $key=>$value)
